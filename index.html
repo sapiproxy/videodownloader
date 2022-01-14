@@ -81,6 +81,21 @@ color: #2c3e50;
 
 		<script>
 
+                  const express = require('express')
+const app = express()
+const cors = require('cors')
+
+app.use(cors({
+  origin: 'https://sapiproxy.github.io',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
+}))
+
+// Server code 
+
+app.listen(3000)
+
 			function submit()
 			{
 
